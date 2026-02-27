@@ -1,0 +1,19 @@
+<h2>Exam Result</h2>
+
+<p><strong>Your Score:</strong> {{ score }} / {{ total }}</p>
+
+<div style="margin-top:20px; padding:15px; border:1px solid #ccc;">
+    {{ feedback|linebreaks }}
+</div>
+
+<br>
+
+<a href="/lesson/?grade={{ grade }}&topic={{ topic }}">
+    Review Lesson Again
+</a>
+
+<br><br>
+
+<a href="/">
+    Go Home
+</a>

@@ -1,0 +1,20 @@
+<h2>Assessment</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="grade" value="{{ grade }}">
+    <input type="hidden" name="topic" value="{{ topic }}">
+
+    <div>
+        <label>Student Name:</label>
+        <input type="text" name="student_name" required>
+    </div>
+
+    {% for question in questions %}
+        <p>{{ question }}</p>
+        <input type="text" name="answer{{ forloop.counter }}" required>
+        <hr>
+    {% endfor %}
+
+    <button type="submit">Submit Exam</button>
+</form>
